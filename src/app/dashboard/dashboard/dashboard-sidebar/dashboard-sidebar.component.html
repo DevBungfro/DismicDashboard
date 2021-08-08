@@ -1,0 +1,24 @@
+<sidebar>
+  <div class="side-nav navbar-dark">
+    <div class="header">
+      <img [src]="user.displayAvatarURL" [alt]="user.username">
+      <h4 routerLink="/dashboard">{{ user.username }}</h4></div>
+      <div class="navbar-nav">
+        <div class="category">Main</div>
+        <a routerLink="/dashboard"
+        routerLinkActive="active"
+        class="nav-item nav-link">
+        <i class="fa fa-star" aria-hidden="true"></i> Home</a>
+
+        <div class="category">User</div>
+        <a routerLink="/dashboard/xp-card"
+          routerLinkActive="active"
+          class="nav-item nav-link">
+          <i class="fa fa-star" aria-hidden="false"></i> XP Card</a>
+        
+      </div>
+    </div>
+  <div id="content">
+    <ng-content></ng-content>
+  </div>
+</sidebar>

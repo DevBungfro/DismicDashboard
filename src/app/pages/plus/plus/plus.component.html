@@ -1,0 +1,24 @@
+<navbar></navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1 class="display-3">Dismic Premium</h1>
+      <p class="lead">Premium</p>
+      <p *ngIf="userService.savedUser"
+        class="text-info">You have <em>{{ plusDaysLeft | number }} days</em> left of Dismic Premium.</p>
+    </div>
+    <div class="col-sm-6">
+      <img class="float float-right plus" src="assets/img/dismic-avatar-transparent.svg" alt="Dismic Premium Transparent Avatar">
+    </div>
+  </div>
+  <section
+    id="benefits"
+    class="row py-5">
+    <app-plus-card
+      duration="Forever"
+      price="99.99"
+      (checkout)="checkout(0)"
+      class="col-sm-4"></app-plus-card>
+    
+  </section>
+</div>
